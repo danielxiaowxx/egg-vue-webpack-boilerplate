@@ -23,8 +23,7 @@ module.exports = app => {
   exports.webpack = {
     webpackConfigList: [
       require(path.join(app.baseDir, 'build/client')),
-      require(path.join(app.baseDir, 'build/server')),
-      require(path.join(app.baseDir, 'build/html'))
+      require(path.join(app.baseDir, 'build/server'))
     ]
   };
 

@@ -1,8 +1,7 @@
 const EasyWebpack = require('easywebpack');
-const htmlConfig = require('./html');
 const clientConfig = require('./client');
 const serverConfig = require('./server');
-const config = [clientConfig, serverConfig, htmlConfig];
+const config = [clientConfig, serverConfig];
 if (process.env.NODE_SERVER) {
   EasyWebpack.server(config);
 } else {

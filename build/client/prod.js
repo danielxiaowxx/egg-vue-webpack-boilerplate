@@ -1,12 +1,11 @@
-const VueWebpack = require('easywebpack-vue');
-const WebpackBaseBuilder = require('../base');
-class ClientProdBuilder extends WebpackBaseBuilder(VueWebpack.WebpackClientBuilder) {
-  constructor(config) {
-    super(config);
+const WebpackWebClientBaseBuilder = require('./base');
+class ClientProdBuilder extends WebpackWebClientBaseBuilder {
+  constructor() {
+    super();
     this.setCssExtract(true);
     this.setManifest(true);
-    this.setBuildConfig(true);
-    this.addDefinePlugin({ PROD: true });
+    this.createBuildConfig(true);
+    this.createDefinePlugin({ PROD: true });
   }
 }
 
